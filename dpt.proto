@@ -1,0 +1,20 @@
+syntax = "proto3";
+package dpt;
+
+message Size {
+	int32 size = 1;
+}
+
+message Dpt {
+	int32 trid = 1;
+	int64 eventime = 2;
+
+	message DptBar {
+		float price = 1;
+		float qty = 2;
+	}
+
+	repeated DptBar askbook = 3;
+	repeated DptBar bidbook = 4;
+
+}
